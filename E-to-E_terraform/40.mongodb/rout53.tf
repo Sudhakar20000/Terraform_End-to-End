@@ -8,9 +8,9 @@ resource "aws_route53_record" "mongodb" {
 
 resource "aws_route53_record" "redis" {
   zone_id = var.zone_id
-  name    = "redies-${var.env}.${var.domain}"
+  name    = "redis-${var.env}.${var.domain}"
   type    = "A"
   ttl     = 1
-  records = [ aws_instance.redies.private_ip ]
+  records = [ aws_instance.redis.private_ip ]
 }
 
