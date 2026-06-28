@@ -6,6 +6,10 @@ data "aws_ssm_parameter" "redis_sg_id" {
     name = "/${var.project}/${var.env}/redis_sg_id"
 }
 
+data "aws_ssm_parameter" "rabbitmq_sg_id" {
+    name = "/${var.project}/${var.env}/rabbitmq_sg_id"
+}
+
 
 data "aws_ssm_parameter" "dbtire_subnet_ids" {
     name = "/${var.project}/${var.env}/dbtire_subnet_ids"
