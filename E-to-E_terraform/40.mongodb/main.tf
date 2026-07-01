@@ -129,7 +129,9 @@ resource "aws_instance" "mysql" {
   instance_type = "t3.micro"
   vpc_security_group_ids  = [ local.mysql_sg_id ]
   subnet_id = local.dbtire_subnet_id
+  depends_on = [aws_iam_role_policy_attachment.mysql] 
   iam_instance_profile = aws_iam_instance_profile.mysql.name
+
 
 
   tags = merge (
