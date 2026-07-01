@@ -10,6 +10,9 @@ data "aws_ssm_parameter" "rabbitmq_sg_id" {
     name = "/${var.project}/${var.env}/rabbitmq_sg_id"
 }
 
+data "aws_ssm_parameter" "mysql_sg_id" {
+    name = "/${var.project}/${var.env}/mysql_sg_id"
+}
 
 data "aws_ssm_parameter" "dbtire_subnet_ids" {
     name = "/${var.project}/${var.env}/dbtire_subnet_ids"

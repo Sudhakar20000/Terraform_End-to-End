@@ -7,7 +7,7 @@ terraform {
     }
     backend "s3" {
         bucket = "amazon-dev-s3-bucket"
-        key = "demo-bucket-mongodb.tfstate"
+        key = "demo-bucket-db.tfstate"
         region = "us-east-1"
         encrypt = true
         use_lockfile = true

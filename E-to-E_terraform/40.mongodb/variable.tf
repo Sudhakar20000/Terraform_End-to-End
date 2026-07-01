@@ -17,3 +17,7 @@ variable "domain" {
     type = string
     default = "sudhakar.shop"
 }
+
+variable "mysql_root_password" {
+    type = string
+}
